@@ -21,6 +21,4 @@ module Cards where
     | length(x) > 1 = sumSingleNum(head(x)) + sumDigits(tail(x))
     | otherwise = sumSingleNum(head(x))
 
-  validate x
-     | rem (sumDigits(doubleEveryOther(toDigits(x)))) 10 == 0 = True
-     | otherwise = False
+  validate x = rem (sumDigits(doubleEveryOther(toDigits(x)))) 10 == 0
